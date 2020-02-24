@@ -10,9 +10,9 @@ workflows:
           aws-secret-access-key: SECRET_ACCESS_KEY_ENV_VAR_NAME
           context: myContext
           create-repo: true
-          dockerfile: myDockerfile
-          path: pathToMyDockerfile
+          dockerfile: Dockerfile
+          path: ./
           profile-name: myProfileName
           region: AWS_REGION_ENV_VAR_NAME
-          repo: myECRRepository
-          tag: 'latest,myECRRepoTag'
+          repo: test-orbs-sample
+          tag: 'latest'
