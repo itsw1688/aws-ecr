@@ -1,5 +1,6 @@
 orbs:
   aws-ecr: circleci/aws-ecr@6.7.0
+  aws-ecs: circleci/aws-ecs@1.1.0
 version: 2.1
 workflows:
   build_and_push_image:
@@ -14,3 +15,9 @@ workflows:
           region: AWS_REGION
           repo: test-orbs-sample
           tag: 'latest'
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build-and-push-image
+          family: 'circleci-orbs-service'
+          cluster-name: 'circleci-orbs-cluster'
+          container-image-name-updates: 'container=circleci-orbs-service,tag=latest'
