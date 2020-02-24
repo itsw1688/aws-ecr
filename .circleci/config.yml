@@ -18,6 +18,6 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
-          family: 'circleci-orbs-service'
+          family: 'circleci-orbs-task:1'
           cluster-name: 'circleci-orbs-cluster'
-          container-image-name-updates: 'container=circleci-orbs-task,tag=latest'
+          container-image-name-updates: 'container=test-orbs-sample,tag=latest'
