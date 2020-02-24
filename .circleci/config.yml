@@ -20,4 +20,4 @@ workflows:
             - aws-ecr/build-and-push-image
           family: 'circleci-orbs-task'
           cluster-name: 'circleci-orbs-cluster'
-          container-image-name-updates: 'container=894218304272.dkr.ecr.ap-northeast-1.amazonaws.com/test-orbs-sample,tag=latest'
+          container-image-name-updates: 'container=circleci-orbs-container,tag=latest'
