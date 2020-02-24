@@ -23,4 +23,4 @@ workflows:
           aws-region: AWS_REGION 
           family: 'circleci-orbs-service'
           cluster-name: 'circleci-orbs-cluster'
-          container-image-name-updates: 'container=test-orbs-sample,tag=latest'
+          container-image-name-updates: 'container=circleci-orbs-service,tag=latest'
